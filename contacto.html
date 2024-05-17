@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Game of Thrones</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <h1>Game of Thrones</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="temporadas.html">Temporadas</a></li>
+                    <li><a href="personajes.html">Personajes</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="contacto" class="contacto">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Contacto</h2>
+                <form id="formulario-contacto">
+                    <div class="grupo-formulario">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="correo">Correo Electrónico:</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="temporada">Temporada Favorita:</label>
+                        <select id="temporada" name="temporada" required>
+                            <option value="">Seleccione</option>
+                            <option value="temporada-1">Temporada 1</option>
+                            <option value="temporada-2">Temporada 2</option>
+                            <option value="temporada-3">Temporada 3</option>
+                        </select>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" required></textarea>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label>
+                            <input type="checkbox" id="terminos" name="terminos" required>
+                            Acepto los términos y condiciones
+                        </label>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <p>&copy; 2024 Game of Thrones. Todos los derechos reservados.</p>
+            <p>Codo a Codo Frontend [Grupo 16]</p>
+        </div>
+    </footer>
+</body>
+</html>

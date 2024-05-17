@@ -1,0 +1,223 @@
+:root {
+    --primario-negro: #000000;
+    --primario-gris-oscuro: #202020;
+    --primario-blanco: #FFFFFF;
+    --primario-rojo-oscuro: #5e0404;
+    --primario-dorado: #ad8911;
+    --secundario-azul-oscuro: #1A1A3C;
+    --secundario-verde-oscuro: #013220;
+    --secundario-plateado: #C0C0C0;
+    --secundario-marron-oscuro: #4B3621;
+}
+
+body {
+    background-color: var(--primario-negro);
+    color: var(--primario-blanco);
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* contenedor del banner */
+.banner-container {
+    width: 100%; /* ancho del contenedor del banner ocupa 100% de la pantalla */
+    height: 500px; 
+    background-image: url('../img/portada_dragon.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.contenedor_personajes {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px; /* espacio alrededor del contenido */
+    border: 1px solid #1f1d1d; /* borde del div */
+}
+
+.contenedor {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--primario-gris-oscuro);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--primario-dorado);
+}
+
+nav {
+    background-color: var(--primario-rojo-oscuro);
+    color: var(--primario-blanco);
+    text-align: center;
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 10px;
+    margin-top: 10px;
+}
+
+nav ul li a {
+    color: var(--primario-blanco);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: var(--primario-dorado);
+}
+
+.hero {
+
+    background-size: cover;
+    background-position: center;
+    color: var(--primario-blanco);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.titulo-seccion {
+    color: var(--primario-rojo-oscuro);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.lista-temporadas, .lista-personajes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.temporada, .personaje {
+    background-color: var(--secundario-marron-oscuro);
+    border: 1px solid var(--secundario-plateado);
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    text-align: center;
+}
+
+/* media queries para tres tamaños de dispositivos */
+@media (max-width: 1024px) {
+    .contenedor {
+        width: 90%;
+    }
+
+    nav ul li {
+        margin: 5px 5px;
+    }
+
+    .temporada, .personaje {
+        width: 45%;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .temporada, .personaje {
+        width: 100%;
+    }
+
+    .hero {
+        padding: 50px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 0;
+    }
+
+    .hero {
+        padding: 30px 0;
+    }
+
+    .titulo-seccion {
+        font-size: 1.5em;
+    }
+
+    .temporada, .personaje {
+        width: 100%;
+    }
+}
+
+/* contenedor del banner para pantallas chicas */
+@media (max-width: 768px) {
+    .banner-container {
+        width: 95%; /* reduce el ancho del contenedor para pantallas chcias */
+    }
+}
+
+footer {
+    background-color: var(--secundario-azul-oscuro);
+    color: var(--primario-blanco);
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+label {
+    display: flex; /* flexbox para alinear los elementos */
+    align-items: center; /* alinear verticalmente los elementos */
+}
+
+/* checkbox */
+input[type="checkbox"] {
+    margin-right: 10px; /* espacio entre el checkbox y el texto */
+}
+
+.contacto .grupo-formulario {
+    margin-bottom: 15px;
+}
+
+.contacto label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contacto input, .contacto textarea, .contacto select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.contacto button {
+    background-color: var(--primario-rojo-oscuro);
+    color: var(--primario-blanco);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.contacto button:hover {
+    background-color: var(--primario-dorado);
+}
