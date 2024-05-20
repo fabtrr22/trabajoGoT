@@ -10,12 +10,78 @@
     --secundario-marron-oscuro: #4B3621;
 }
 
+/* estilos generales */
 body {
+    font-family: 'Cinzel', serif;
     background-color: var(--primario-negro);
-    color: var(--primario-blanco);
-    font-family: 'Georgia', serif;
+/*     color: var(--primario-blanco);
+    font-family: 'Georgia', serif; */
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos del contenedor principal */
+.contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* estilos del header y nav */
+header {
+    position: relative;
+    background-color: var(--primario-gris-oscuro);
+    background-image: url(https://wallpapercave.com/wp/wp4292437.jpg);
+    background-size: cover;
+    background-position: center;
+    /* color: #fff; */
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+
+header .contenedor {
+    position: relative;
+    z-index: 2;
+}
+
+header a img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    position: relative;
+}
+
+/* menu hamburguesa */
+.menu-hamburguesa {
+    display: none; /* oculto por defecto */
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li a {
+
+    color: #c0c0c0;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
 }
 
 /* contenedor del banner */
@@ -32,34 +98,38 @@ body {
     width: 80%;
     margin: 0 auto;
     text-align: center;
+    color: var(--secundario-plateado);
     padding: 20px; /* espacio alrededor del contenido */
-    border: 1px solid #1f1d1d; /* borde del div */
+    border: 1px solid #1f1d1d;
 }
 
-.contenedor {
+/* .contenedor {
     width: 80%;
     margin: 0 auto;
-}
+} */
 
-header {
+/* header {
     background-color: var(--primario-gris-oscuro);
     padding: 20px 0;
     text-align: center;
-}
+} */
 
 header h1 {
     margin: 0;
-    color: var(--primario-dorado);
+    color: var(--primario-gris-oscuro);
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-nav {
+/* nav {
     background-color: var(--primario-rojo-oscuro);
     color: var(--primario-blanco);
     text-align: center;
     height: 40px;
-}
+} */
 
-nav ul {
+/* nav ul {
     list-style: none;
     padding: 0;
     display: flex;
@@ -75,11 +145,11 @@ nav ul li {
 nav ul li a {
     color: var(--primario-blanco);
     text-decoration: none;
-}
+} */
 
-nav ul li a:hover {
+/* nav ul li a:hover {
     color: var(--primario-dorado);
-}
+} */
 
 .hero {
 
@@ -172,10 +242,36 @@ nav ul li a:hover {
     .banner-container {
         width: 95%; /* reduce el ancho del contenedor para pantallas chcias */
     }
+    .menu-hamburguesa {
+        display: block; /* menu hamburguesa para pantallas chicas */
+    }
+
+    nav ul {
+        display: none; /* ocultar los enlaces del nav por defecto */
+        flex-direction: column; /* cambiar la direccion a columna */
+        width: 100%; /* ancho completo */
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 15px; /* mas espacio alrededor de los enlaces */
+        border-top: 1px solid #444;
+    }
+
+    nav ul.mostrar {
+        display: flex; /* mostrar los enlaces cuando se activa el menu */
+    }
 }
 
 footer {
-    background-color: var(--secundario-azul-oscuro);
+    background-color: var(--primario-gris-oscuro);
     color: var(--primario-blanco);
     text-align: center;
     padding: 20px 0;
@@ -197,6 +293,7 @@ input[type="checkbox"] {
 
 .contacto .grupo-formulario {
     margin-bottom: 15px;
+    color: rgb(160, 157, 157);
 }
 
 .contacto label {
@@ -216,6 +313,9 @@ input[type="checkbox"] {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .contacto button:hover {
