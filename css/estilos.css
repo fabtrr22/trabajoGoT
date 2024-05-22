@@ -164,8 +164,8 @@ input[type="checkbox"] {
 }
 
 /* media queries para tres tamaños de dispositivos */
-@media (max-width: 1024px) {
-    .contenedor {
+@media (max-width: 1024px) { /*cambiar a 1440*/
+    .contenedor {/*Fijarse xq en contactos no funciona bien ej responsive:1036x379*/
         width: 90%;
     }
 
