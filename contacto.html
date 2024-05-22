@@ -32,15 +32,15 @@
                 <form id="formulario-contacto">
                     <div class="grupo-formulario">
                         <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required>
+                        <input class="input-padron" type="text" id="nombre" name="nombre" required>
                     </div>
                     <div class="grupo-formulario">
                         <label for="correo">Correo Electrónico:</label>
-                        <input type="email" id="correo" name="correo" required>
+                        <input class="input-padron" type="email" id="correo" name="correo" required>
                     </div>
                     <div class="grupo-formulario">
                         <label for="temporada">Temporada Favorita:</label>
-                        <select id="temporada" name="temporada" required>
+                        <select class="input-padron" id="temporada" name="temporada" required>
                             <option value="">Seleccione</option>
                             <option value="temporada-1">Temporada 1</option>
                             <option value="temporada-2">Temporada 2</option>
@@ -54,14 +54,11 @@
                     </div>
                     <div class="grupo-formulario">
                         <label for="mensaje">Mensaje:</label>
-                        <textarea id="mensaje" name="mensaje" required></textarea>
+                        <textarea class="input-padron" id="mensaje" name="mensaje" required></textarea>
                     </div>
-                    <div class="grupo-formulario">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="terminos" name="terminos" required>
-                            Acepto los términos y condiciones
-                        </label>
-                    </div>
+                
+                        <label ><input class="checkbox-container" type="checkbox" id="terminos" name="terminos" required>Acepto los términos y condiciones</label>
+              
                     <button type="submit">Enviar</button>
                 </form>
             </div>

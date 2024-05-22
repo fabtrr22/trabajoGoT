@@ -295,15 +295,19 @@ input[type="checkbox"] {
     margin-bottom: 15px;
     color: rgb(160, 157, 157);
 }
-
-.contacto label {
-    display: block;
-    margin-bottom: 5px;
+.checkbox-container{
+    color: rgb(160, 157, 157);
 }
 
-.contacto input, .contacto textarea, .contacto select {
+.contacto label {
+   /* display: block;*/
+    margin-bottom: 5px;
+    color: rgb(160, 157, 157);
+}
+
+.contacto .input-padron, .contacto textarea, .contacto select {
     width: 100%;
-    padding: 10px;
+    padding: 10px 0;
     margin-bottom: 5px;
 }
 
