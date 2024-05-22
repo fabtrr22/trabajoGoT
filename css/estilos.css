@@ -28,62 +28,6 @@ body {
     margin: 0 auto;
 }
 
-/* estilos del header y nav */
-header {
-    position: relative;
-    background-color: var(--primario-gris-oscuro);
-    background-image: url(https://wallpapercave.com/wp/wp4292437.jpg);
-    background-size: cover;
-    background-position: center;
-    /* color: #fff; */
-    padding: 60px 0;
-    overflow: hidden;
-}
-
-
-header .contenedor {
-    position: relative;
-    z-index: 2;
-}
-
-header a img {
-    max-width: 100%;
-    height: auto;
-}
-
-nav {
-    position: relative;
-}
-
-/* menu hamburguesa */
-.menu-hamburguesa {
-    display: none; /* oculto por defecto */
-    font-size: 30px;
-    cursor: pointer;
-    padding: 10px;
-    color: #fff;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-nav ul li a {
-
-    color: #c0c0c0;
-    font-size: 20px;
-    text-decoration: none;
-    padding: 10px 20px;
-}
-
-nav ul li a:hover {
-    background-color: #555;
-}
-
 /* contenedor del banner */
 .banner-container {
     width: 100%; /* ancho del contenedor del banner ocupa 100% de la pantalla */
@@ -113,14 +57,6 @@ nav ul li a:hover {
     padding: 20px 0;
     text-align: center;
 } */
-
-header h1 {
-    margin: 0;
-    color: var(--primario-gris-oscuro);
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
 
 /* nav {
     background-color: var(--primario-rojo-oscuro);
@@ -182,94 +118,6 @@ nav ul li a {
     text-align: center;
 }
 
-/* media queries para tres tamaños de dispositivos */
-@media (max-width: 1024px) {
-    .contenedor {
-        width: 90%;
-    }
-
-    nav ul li {
-        margin: 5px 5px;
-    }
-
-    .temporada, .personaje {
-        width: 45%;
-    }
-
-    .hero {
-        padding: 70px 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .temporada, .personaje {
-        width: 100%;
-    }
-
-    .hero {
-        padding: 50px 0;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 15px 0;
-    }
-
-    .hero {
-        padding: 30px 0;
-    }
-
-    .titulo-seccion {
-        font-size: 1.5em;
-    }
-
-    .temporada, .personaje {
-        width: 100%;
-    }
-}
-
-/* contenedor del banner para pantallas chicas */
-@media (max-width: 768px) {
-    .banner-container {
-        width: 95%; /* reduce el ancho del contenedor para pantallas chcias */
-    }
-    .menu-hamburguesa {
-        display: block; /* menu hamburguesa para pantallas chicas */
-    }
-
-    nav ul {
-        display: none; /* ocultar los enlaces del nav por defecto */
-        flex-direction: column; /* cambiar la direccion a columna */
-        width: 100%; /* ancho completo */
-        background-color: #333;
-        position: absolute;
-        top: 50px;
-        left: 0;
-    }
-
-    nav ul li {
-        text-align: center;
-    }
-
-    nav ul li a {
-        padding: 15px; /* mas espacio alrededor de los enlaces */
-        border-top: 1px solid #444;
-    }
-
-    nav ul.mostrar {
-        display: flex; /* mostrar los enlaces cuando se activa el menu */
-    }
-}
-
 footer {
     background-color: var(--primario-gris-oscuro);
     color: var(--primario-blanco);
@@ -324,4 +172,54 @@ input[type="checkbox"] {
 
 .contacto button:hover {
     background-color: var(--primario-dorado);
+}
+
+/* media queries para tres tamaños de dispositivos */
+@media (max-width: 1024px) {
+    .contenedor {
+        width: 90%;
+    }
+
+    .temporada, .personaje {
+        width: 45%;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .temporada, .personaje {
+        width: 100%;
+    }
+
+    .hero {
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 0;
+    }
+
+    .hero {
+        padding: 30px 0;
+    }
+
+    .titulo-seccion {
+        font-size: 1.5em;
+    }
+
+    .temporada, .personaje {
+        width: 100%;
+    }
+}
+
+/* contenedor del banner para pantallas chicas */
+@media (max-width: 768px) {
+    .banner-container {
+        width: 95%; /* reduce el ancho del contenedor para pantallas chcias */
+    }
 }
