@@ -118,17 +118,6 @@ nav ul li a {
     text-align: center;
 }
 
-footer {
-    background-color: var(--primario-gris-oscuro);
-    color: var(--primario-blanco);
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
 label {
     display: flex; /* flexbox para alinear los elementos */
     align-items: center; /* alinear verticalmente los elementos */
@@ -200,9 +189,6 @@ input[type="checkbox"] {
 }
 
 @media (max-width: 480px) {
-    header {
-        padding: 15px 0;
-    }
 
     .hero {
         padding: 30px 0;

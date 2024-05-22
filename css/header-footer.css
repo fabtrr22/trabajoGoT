@@ -32,6 +32,21 @@ header div.cabecera nav{
 #menu, #menu-check{
     display: none;
 }
+
+/***** Footer  *******/
+footer {
+    background-color: var(--primario-gris-oscuro);
+    color: var(--primario-blanco);
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+/********************/
+
+/*Media queries*/
 @media only screen and (max-width:900px){
     header div.cabecera, header div.cabecera ul,header div.cabecera ul li{
         /* display: inline; */
@@ -43,6 +58,9 @@ header div.cabecera nav{
     }
 }
 @media only screen and (max-width:700px){
+    #img-header {
+        max-width: 90%;
+    }
     header h1{
         margin: 0;
     }
