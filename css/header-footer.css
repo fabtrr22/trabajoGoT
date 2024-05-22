@@ -106,14 +106,15 @@ footer p {
         overflow: none;
     }*/
     header div.cabecera nav{
-        position: absolute;
+        /*position: fixed;lo camie yo*/
+        position: absolute;/*como en el video*/
         top: 0;
         right: 0;
         height: 100%;
         background-color: black;
         padding-top: 0.5em;
         padding-right: 2.5em;
-        opacity: 0.8;
+        opacity: 0.9;
         color: #ffffff;
         font-size: 1.4em;
         z-index: 9998;
