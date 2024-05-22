@@ -6,16 +6,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     <title>Game of Thrones</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/header-footer.css">
 </head>
 <body>
     <header>
-        <div class="nav">
-            <h1>*</h1>
+        <div class="cabecera">
+            <img id="img-header" src="img/contenedor2.jpg" alt="">
+
+            <input type="checkbox" id="menu-check">
+            <label id="menu" for="menu-check">
+                <span id="menu-abrir">&#9776;</span>
+                <span id="menu-cerrar">X</span>
+            </label>
+
             <nav>
-                <div class="menu-hamburguesa" id="menu-hamburguesa">
-                    &#9776;
-                </div>
-                <ul id="nav-links">
+                <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="temporadas.html">Temporadas</a></li>
                     <li><a href="personajes.html">Personajes</a></li>
