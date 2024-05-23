@@ -53,15 +53,15 @@
                 <form id="formulario-contacto">
                     <div class="grupo-formulario">
                         <label for="nombre">Nombre:</label>
-                        <input class="input-padron" type="text" id="nombre" name="nombre" required>
+                        <input class="input-padron" type="text" id="nombre" name="nombre">
                     </div>
                     <div class="grupo-formulario">
                         <label for="correo">Correo Electrónico:</label>
-                        <input class="input-padron" type="email" id="correo" name="correo" required>
+                        <input class="input-padron" type="email" id="correo" name="correo">
                     </div>
                     <div class="grupo-formulario">
                         <label for="temporada">Temporada Favorita:</label>
-                        <select class="input-padron" id="temporada" name="temporada" required>
+                        <select class="input-padron" id="temporada" name="temporada">
                             <option value="">Seleccione</option>
                             <option value="temporada-1">Temporada 1</option>
                             <option value="temporada-2">Temporada 2</option>
@@ -75,7 +75,7 @@
                     </div>
                     <div class="grupo-formulario">
                         <label for="mensaje">Mensaje:</label>
-                        <textarea class="input-padron" id="mensaje" name="mensaje" required></textarea>
+                        <textarea class="input-padron" id="mensaje" name="mensaje"></textarea>
                     </div>
 
                     <label><input class="checkbox-container" type="checkbox" id="terminos" name="terminos"
@@ -85,6 +85,8 @@
                 </form>
             </div>
         </section>
+        <!-- aqui valido formulario con javascript -->
+        <script src="js/validarForm.js"></script>      
     </main>
 
     <footer>
