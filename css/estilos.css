@@ -3,10 +3,10 @@
     --primario-negro: #000000;
     --primario-gris-oscuro: #202020;
     --primario-blanco: #FFFFFF;
-    --primario-rojo-oscuro: #5e0404;
+    --primario-rojo-oscuro: #850303;
     --primario-dorado: #ad8911;
     --secundario-plateado: #C0C0C0;
-    --secundario-marron-oscuro: #4B3621;
+    --secundario-marron-oscuro: #523417;
 }
 
 /* estilos generales */
@@ -24,7 +24,27 @@ h1{
     color: var(--primario-dorado);
 }
 
-.imagen-arriba, .imagen-abajo {
+p {
+    color: var(--secundario-plateado);
+}
+
+h3 {
+    color: var(--primario-dorado);
+}
+
+.imagen-abajo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 400px;
+    height: 200px;
+    background-image: url(../img/portada_web_got_2.jpg);
+    background-size: cover;
+    margin-top: 30px;
+    flex: 0 0 auto;
+}
+
+.imagen-arriba {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -157,14 +177,32 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--secundario-marron-oscuro);
+    background-color: var(--primario-gris-oscuro);
     border: 1px solid var(--secundario-plateado);
     padding: 20px;
     margin: 10px;
     width: 30%;
     text-align: center;
+    width: calc(33.333% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
 }
 
+.temporada img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.personaje img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 5px;
+}
 
 label {
     display: flex;
@@ -204,7 +242,7 @@ input[type="checkbox"] {
     margin-bottom: 5px;
 }
 
-.contacto button {
+.contacto button, .contenedor button {
     align-self: center;
     background-color: var(--primario-rojo-oscuro);
     color: var(--primario-blanco);

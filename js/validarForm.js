@@ -19,6 +19,13 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Por favor, ingrese un correo electrónico válido.');
         }
 
+          // valido campo pais
+          const pais = document.getElementById('pais');
+          if (pais.value === '') {
+              valid = false;
+              alert('Por favor, seleccione su pais.');
+          }
+
         // valido campo temporada favorita
         const temporada = document.getElementById('temporada');
         if (temporada.value === '') {

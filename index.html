@@ -7,6 +7,8 @@
     <title>Game of Thrones</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
 </head>
 <body>
     <header>
@@ -57,8 +59,17 @@
         <div class="contenedor">
             <p>&copy; 2024 Game of Thrones. Todos los derechos reservados.</p>
             <p>Codo a Codo Frontend [Grupo 16]</p>
+            <button onclick="scrollToTop()">Ir Arriba</button>
         </div>
     </footer>
     <script src="js/hamburguesa.js"></script>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>

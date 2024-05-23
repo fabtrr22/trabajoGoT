@@ -8,24 +8,12 @@
     <title>Contacto - Game of Thrones</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/png">
 </head>
 
 <body>
     <header>
-        <!-- <div class="nav">
-            <h1>*</h1>
-            <nav>
-                <div class="menu-hamburguesa" id="menu-hamburguesa">
-                    &#9776;
-                </div>
-                <ul id="nav-links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="temporadas.html">Temporadas</a></li>
-                    <li><a href="personajes.html">Personajes</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div> -->
         <div class="cabecera">
             <img id="img-header" src="img/contenedor2.jpg" alt="">
 
@@ -56,6 +44,19 @@
                         <input class="input-padron" type="text" id="nombre" name="nombre">
                     </div>
                     <div class="grupo-formulario">
+                        <label for="pais">País:</label>
+                        <select class="input-padron" id="pais" name="pais">
+                            <option value="">Seleccione</option>
+                            <option value="arg">Argentina</option>
+                            <option value="col">Colombia</option>
+                            <option value="ecu">Ecuador</option>
+                            <option value="mex">Mexico</option>
+                            <option value="per">Perú</option>
+                            <option value="uru">Uruguay</option>
+                            <option value="ven">Venezuela</option>
+                        </select>
+                    </div>
+                    <div class="grupo-formulario">
                         <label for="correo">Correo Electrónico:</label>
                         <input class="input-padron" type="email" id="correo" name="correo">
                     </div>
@@ -66,11 +67,11 @@
                             <option value="temporada-1">Temporada 1</option>
                             <option value="temporada-2">Temporada 2</option>
                             <option value="temporada-3">Temporada 3</option>
-                            <option value="temporada-1">Temporada 4</option>
-                            <option value="temporada-2">Temporada 5</option>
-                            <option value="temporada-3">Temporada 6</option>
-                            <option value="temporada-1">Temporada 7</option>
-                            <option value="temporada-2">Temporada 8</option>
+                            <option value="temporada-4">Temporada 4</option>
+                            <option value="temporada-5">Temporada 5</option>
+                            <option value="temporada-6">Temporada 6</option>
+                            <option value="temporada-7">Temporada 7</option>
+                            <option value="temporada-8">Temporada 8</option>
                         </select>
                     </div>
                     <div class="grupo-formulario">
@@ -93,9 +94,17 @@
         <div class="contenedor">
             <p>&copy; 2024 Game of Thrones. Todos los derechos reservados.</p>
             <p>Codo a Codo Frontend [Grupo 16]</p>
+            <button onclick="scrollToTop()">Ir Arriba</button>
         </div>
     </footer>
     <script src="js/hamburguesa.js"></script>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
-
 </html>

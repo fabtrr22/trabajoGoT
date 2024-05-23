@@ -7,6 +7,8 @@
     <title>Temporadas - Game of Thrones</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
 </head>
 <body>
     <header>
@@ -33,40 +35,47 @@
     <main>
         <section id="temporadas" class="temporadas">
             <div class="contenedor">
-                <h2 class="titulo-seccion">Temporadas</h2>
+                <h2 class="titulo-seccion">Lista de Temporadas</h2>
                 <div class="lista-temporadas">
                     <article class="temporada">
                         <h3>Temporada 1</h3>
                         <img src="img/temporada-1.jpg" alt="">
-                        <p>{nombre_de_la_temporada}</p>
+                        <p>Juego de Tronos (Game of Thrones)</p>
                     </article>
                     <article class="temporada">
                         <h3>Temporada 2</h3>
-                        <p>{nombre_de_la_temporada}</p>
+                        <img src="img/temporada-2.jpg" alt="">
+                        <p>Choque de Reyes (A Clash of Kings)</p>
                     </article>
                     <article class="temporada">
                         <h3>Temporada 3</h3>
-                        <p>{nombre_de_la_temporada}</p>
+                        <img src="img/temporada-3.jpg" alt="">
+                        <p>Tormenta de Espadas (A Storm of Swords)</p>
                     </article>
                     <article class="temporada">
                         <h3>Temporada 4</h3>
-                        <p>{nombre_de_la_temporada}</p>
+                        <img src="img/temporada-4.png" alt="">
+                        <p>Festín de Cuervos (A Feast for Crows)</p>
                     </article>
                     <article class="temporada">
                         <h3>Temporada 5</h3>
-                        <p>{nombre_de_la_temporada}</p>
+                        <img src="img/temporada-5.jpg" alt="">
+                        <p>Danza de Dragones (A Dance with Dragons)</p>
                     </article>
                     <article class="temporada">
                         <h3>Temporada 6</h3>
-                        <p>{nombre_de_la_temporada}</p>
+                        <img src="img/temporada-6.png" alt="">
+                        <p>Vientos de Invierno (The Winds of Winter)</p>
                     </article>
                     <article class="temporada">
                         <h3>Temporada 7</h3>
-                        <p>{nombre_de_la_temporada}</p>
+                        <img src="img/temporada-7.png" alt="">
+                        <p>Dragones de Fuego (Fire and Blood)</p>
                     </article>
                     <article class="temporada">
                         <h3>Temporada 8</h3>
-                        <p>{nombre_de_la_temporada}</p>
+                        <img src="img/temporada-8.png" alt="">
+                        <p>Las Campanas (The Bells)</p>
                     </article>
                 
                 </div>
@@ -78,8 +87,17 @@
         <div class="contenedor">
             <p>&copy; 2024 Game of Thrones. Todos los derechos reservados.</p>
             <p>Codo a Codo Frontend [Grupo 16]</p>
+            <button onclick="scrollToTop()">Ir Arriba</button>
         </div>
     </footer>
     <script src="js/hamburguesa.js"></script>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>
