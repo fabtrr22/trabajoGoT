@@ -13,6 +13,8 @@ Este proyecto es una fanpage dedicada a la serie **Game of Thrones**, desarrolla
 - **Estilos CSS**: Utilización de `flexbox` para la maquetación y `media queries` para garantizar la responsividad en tres tamaños de dispositivos (móvil, tablet y escritorio).
 - **JavaScript**: Implementación de validación de formularios con alertas para asegurar la entrada de datos correcta por parte del usuario.
 - **Menú Hamburguesa**: Creación de un menú de navegación tipo hamburguesa, diseñado para mejorar la usabilidad en dispositivos móviles.
+- **Iframe**: Uso de iframe en página principal que contiene un PDF del libro de Game of Thrones.
+- **Validación w3**: El sitio está validado según los estándares w3.
 - **Animaciones**: Inclusión de imágenes animadas para mejorar la experiencia visual.
 - **Fuentes**: Uso de Google Fonts para mejorar la tipografía y estética del sitio.
 - **Deploy**: El sitio está desplegado en GitHub Pages, facilitando su acceso y navegación.
@@ -29,19 +31,33 @@ Este proyecto es una fanpage dedicada a la serie **Game of Thrones**, desarrolla
 
 /
 ├── index.html
+
 ├── temporadas.html
+
 ├── personajes.html
+
 ├── contacto.html
+
 ├── css/
+
 │ ├── estilos.css
+
 │ └── header-footer.css
+
 ├── js/
+
 │ ├── hamburguesa.js
+
 | └── validarForm.js
+
 ├── img/
+
 │ ├── contenedor2.jpg
+
 │ └── ... (otras imágenes)
+
 └── favicon.ico
+
 
 ## Descripción Detallada de las Páginas
 
