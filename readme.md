@@ -5,7 +5,7 @@
 
 ## Descripción del Proyecto
 
-Este proyecto es una fanpage dedicada a la serie **Game of Thrones**, desarrollada como parte del curso de Diseño Web. El sitio web está compuesto por cuatro páginas HTML principales y está diseñado para ofrecer una experiencia de usuario atractiva y funcional. El proyecto demuestra el uso de técnicas avanzadas de diseño y desarrollo web, incluyendo responsividad, validación de formularios y animaciones.
+Este proyecto es una fanpage dedicada a la serie **Game of Thrones**, desarrollada como parte del curso de  Frontend de Codo a Codo. El sitio web está compuesto por cuatro páginas HTML principales y está diseñado para ofrecer una experiencia de usuario atractiva y funcional. El proyecto demuestra el uso de técnicas avanzadas de diseño y desarrollo web, incluyendo responsividad, validación de formularios y animaciones.
 
 ## Características Técnicas
 
@@ -30,33 +30,21 @@ Este proyecto es una fanpage dedicada a la serie **Game of Thrones**, desarrolla
 ## Estructura del Proyecto
 
 /
-├── index.html
+├── index.html  
+├── temporadas.html  
+├── personajes.html  
+├── contacto.html  
+├── css/  
+│ ├── estilos.css  
+│ └── header-footer.css  
+├── js/  
+│ ├── hamburguesa.js  
+| └── validarForm.js  
+├── img/  
+│ ├── contenedor2.jpg  
+│ └── ... (otras imágenes)  
+└── favicon.ico  
 
-├── temporadas.html
-
-├── personajes.html
-
-├── contacto.html
-
-├── css/
-
-│ ├── estilos.css
-
-│ └── header-footer.css
-
-├── js/
-
-│ ├── hamburguesa.js
-
-| └── validarForm.js
-
-├── img/
-
-│ ├── contenedor2.jpg
-
-│ └── ... (otras imágenes)
-
-└── favicon.ico
 
 
 ## Descripción Detallada de las Páginas
