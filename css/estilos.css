@@ -281,6 +281,20 @@ input[type="checkbox"] {
     background-color: var(--primario-dorado);
 }
 
+footer a {
+    color: #000;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+footer i {
+    margin-right: 8px;
+}
+
 /* media queries para tres tamaños de dispositivos */
 @media (max-width: 1440px) { /*antes 1024, cambiado a 1440*/
     .contenedor {/*Fijarse xq en contactos no funciona bien ej responsive:1036x379*/
