@@ -33,36 +33,29 @@
     </header>
 
     <main>
-        <section id="temporadas" class="temporadas">
+        <!-- <section id="banner" class="banner"> -->
+            <div class="banner-container">
+                
+            </div>
+<!--         </section> -->
+
+        <section id="inicio" class="hero">
             <div class="contenedor">
-                <h2 class="titulo-seccion">Lista de Temporadas</h2>
-                <button id="btn-agregar-temporada">Agregar temporada</button>
-                <div id="modal-formulario" class="modal">
-                    <div class="modal-contenido">
-                        <span class="cerrar" id="cerrar-modal">&times;</span>
-                        <h3>Agregar Nueva Temporada</h3>
-                        <form id="form-agregar-temporada" method="POST" action="{{ url_for('temporadas') }}">
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" required>
-                            <label for="descripcion">Descripción:</label>
-                            <input type="text" id="descripcion" name="descripcion" required>
-                            <label for="imagen">Imagen:</label>
-                            <input type="text" id="imagen" name="imagen" required>
-                            <button type="submit">Agregar</button>
-                            <button type="button" id="cancelar">Cancelar</button>
-                        </form>
-                    </div>
+                <h1>Bienvenidos a Game Of Thrones Fanpage</h1>
+                <div class="imagen-arriba">
                 </div>
-                <div class="lista-temporadas">
-                    {% for temporada in temporadas %}
-                    <article class="temporada">
-                        <h3>{{ temporada['nombre'] }}</h3>
-                        <img src="{{ temporada['imagen'] }}" alt="">
-                        <p>{{ temporada['descripcion'] }}</p>
-                    </article>
-                    {% endfor %}
+                <p>¡Saludos, nobles visitantes! Bienvenidos a nuestra fanpage dedicada a la épica serie <strong>Game of Thrones</strong>. Aquí, los apasionados de los Siete Reinos encontrarán un lugar para explorar y celebrar todo lo relacionado con esta icónica saga.</p>
+                <p>Nuestra comunidad está diseñada para ofrecerte un espacio donde puedas revivir los momentos más emocionantes, debatir teorías intrigantes, y descubrir curiosidades sobre tus personajes favoritos y sus historias. Desde el despiadado Juego de Tronos hasta los secretos más oscuros de Westeros y Essos, nuestro sitio es el refugio perfecto para todos los leales seguidores de la serie.</p>
+                <h1>Únete a la Hermandad</h1>
+                <div class="imagen-abajo">
+                </div>
+                <p>Ya seas un Stark del Norte, un Lannister de Casterly Rock, o un Targaryen de más allá del mar Angosto, nuestra fanpage es tu hogar. Comparte tu pasión por <strong>Game of Thrones</strong> y conecta con otros fans que comparten tu entusiasmo por esta serie que redefinió la televisión.</p>
+                <p>¡Prepara tu capa, afila tu espada y sumérgete en el fascinante mundo de Game of Thrones con nosotros!</p>
+                <div class="contenedor-iframe">
+                    <iframe src="https://www.nothuman.net/images/files/discussion/1/e72f9f1f181a66887baa7270037c582e.pdf" allowfullscreen></iframe>
                 </div>
             </div>
+
         </section>
     </main>
 
@@ -77,7 +70,7 @@
             <button onclick="scrollToTop()">Ir Arriba</button>
         </div>
     </footer>
-    <script src="{{ url_for('static', filename='js/hamburguesa.js') }}"></script>
+    <script src="js/hamburguesa.js"></script>
     <script>
         function scrollToTop() {
             window.scrollTo({
@@ -85,31 +78,14 @@
                 behavior: 'smooth'
             });
         }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            const btnAgregarTemporada = document.getElementById("btn-agregar-temporada");
-            const modal = document.getElementById("modal-formulario");
-            const cerrarModal = document.getElementById("cerrar-modal");
-            const cancelar = document.getElementById("cancelar");
-
-            btnAgregarTemporada.addEventListener("click", function() {
-                modal.style.display = "block";
+    
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
+        }
+</script>
 
-            cerrarModal.addEventListener("click", function() {
-                modal.style.display = "none";
-            });
-
-            cancelar.addEventListener("click", function() {
-                modal.style.display = "none";
-            });
-
-            window.addEventListener("click", function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            });
-        });
-    </script>
 </body>
 </html>
