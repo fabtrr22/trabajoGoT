@@ -1,0 +1,132 @@
+#img-header{
+    max-width: 60%; /* Ajusta el ancho máximo */
+    display: block; /* Elimina el espacio extra debajo de la imagen */
+    margin: 0 auto; /* Centra horizontalmente */
+}
+
+/*Modifico el menu del nav*/
+nav ul li a {
+    color: #c0c0c0;
+    font-size: 20px;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    background-color: #555;
+}
+/*********/
+
+/*****    Hamburguesa    ********/
+header div.cabecera nav ul{
+    /* place-content: flex-start; */
+    display: contents;
+    /* font-size: 1.4em; */
+}
+/*modifica hamburguesa*/
+header div.cabecera nav{
+    width: 100%;/*lo que ocupa al abrir hamburguesa*/
+    display: flex;
+    /* place-content: space-between; */
+    justify-content: center;
+    gap: 9%;
+}
+#menu, #menu-check{
+    display: none;
+}
+
+/***** Footer  *******/
+footer {
+    background-color: var(--primario-gris-oscuro);
+    color: var(--primario-blanco);
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+/********************/
+
+/*Media queries*/
+@media only screen and (max-width:900px){
+    header div.cabecera, header div.cabecera ul,header div.cabecera ul li{
+        /* display: inline; */
+        display: contents;
+    }
+    header div.nav{
+        width: 100%;
+        display: inline;
+    }
+}
+@media only screen and (max-width:700px){
+    header h1{
+        margin: 0;
+    }
+    header h1 a{
+        padding: 0;
+    }
+    header div.cabecera{
+        display: flex;
+        place-content: space-between;
+    }
+    #menu-check:not(:checked) ~ nav{
+        display: none;
+    }
+    #menu-check:checked ~ nav{
+        display: block;
+    }
+    #menu{
+        display: block;
+        color:#FFFFFF;
+        background-color: #000000;
+        font-size: 1.2em;
+        font-weight: bold;
+        border: 3px solid #FFFFFF;
+        border-radius: 0.3em;
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em;
+        z-index: 9999;
+    }
+    #menu:hover{
+        color: #ffffff;
+        background: #000000;
+    }
+    #menu-cerrar{
+        display: none;
+    }
+    /*cambiar boton*/
+    #menu-check:checked ~ label #menu-abrir{
+        display: none;
+    }
+    #menu-check:checked ~ label #menu-cerrar{
+        display: block;
+    }
+    /*no permite el scroll
+    body #menu-check:checked ~ label #menu-cerrar{
+        overflow: none;
+    }*/
+    header div.cabecera nav{
+        /*position: fixed;lo camie yo*/
+        position: absolute;/*como en el video*/
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: black;
+        padding-top: 0.5em;
+        padding-right: 2.5em;
+        opacity: 0.9;
+        color: #ffffff;
+        font-size: 1.4em;
+        z-index: 9998;
+    }
+    header div.cabecera nav ul a{
+        color: #ffffff;
+        background: none;
+    }
+    header div.cabecera nav ul, header div.cabecera nav ul li{
+        display: block;
+        text-align: right;
+    }
+
+}
+/**************************************/

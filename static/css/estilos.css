@@ -1,0 +1,392 @@
+/* paleta de colores */
+:root {
+    --primario-negro: #000000;
+    --primario-gris-oscuro: #202020;
+    --primario-blanco: #FFFFFF;
+    --primario-rojo-oscuro: #850303;
+    --primario-dorado: #ad8911;
+    --secundario-plateado: #C0C0C0;
+    --secundario-marron-oscuro: #523417;
+}
+
+/* estilos generales */
+body {
+    font-family: 'Cinzel', serif;
+    background-color: var(--primario-negro);
+/*     color: var(--primario-blanco);
+    font-family: 'Georgia', serif; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color: var(--primario-dorado);
+}
+
+p {
+    color: var(--secundario-plateado);
+}
+
+h3 {
+    color: var(--primario-dorado);
+}
+
+.imagen-abajo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 400px;
+    height: 200px;
+    background-image: url(../img/portada_web_got_2.jpg);
+    background-size: cover;
+    margin-top: 30px;
+    flex: 0 0 auto;
+}
+
+.imagen-arriba {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 400px;
+    height: 200px;
+    background-image: url(../img/portada_web_got.jpg);
+    background-size: cover;
+    margin-top: 30px;
+    flex: 0 0 auto;
+}
+
+/* estilos del contenedor principal */
+.contenedor {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* animacion */
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        
+    }
+    100% {
+        opacity: 1;
+        
+    }
+}
+
+/* contenedor del banner */
+.banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* ancho del contenedor del banner ocupa 100% de la pantalla */
+    height: 500px; 
+    background-image: url('../img/portada_dragon.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: aparecer 4s;
+}
+
+.contenedor-iframe {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* relacion de aspecto 16:9 */
+    margin: 20px 0;
+}
+
+.contenedor-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.contenedor_personajes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--secundario-plateado);
+    padding: 20px; /* espacio alrededor del contenido */
+    border: 1px solid #1f1d1d;
+}
+
+/* .contenedor {
+    width: 80%;
+    margin: 0 auto;
+} */
+
+/* header {
+    background-color: var(--primario-gris-oscuro);
+    padding: 20px 0;
+    text-align: center;
+} */
+
+nav {
+    height: 40px;
+}
+
+/* nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 10px;
+    margin-top: 10px;
+}
+
+nav ul li a {
+    color: var(--primario-blanco);
+    text-decoration: none;
+} */
+
+nav ul li a:hover {
+    color: var(--primario-dorado);
+}
+
+/* animacion */
+@keyframes deslizar {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#img-header {
+    animation: deslizar 4s ease;
+}
+
+.hero {
+
+    background-size: cover;
+    background-position: center;
+    color: var(--primario-blanco);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.titulo-seccion {
+    color: var(--primario-rojo-oscuro);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.lista-temporadas, .lista-personajes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.temporada, .personaje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primario-gris-oscuro);
+    border: 1px solid var(--secundario-plateado);
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    text-align: center;
+    width: calc(33.333% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.temporada img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+.temporada img:hover, .personaje img:hover {
+    transform: scale(1.2);
+}
+
+.personaje img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+/* checkbox */
+input[type="checkbox"] {
+    margin-right: 10px; /* espacio entre el checkbox y el texto */
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.contacto .grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    color: rgb(160, 157, 157);
+}
+.checkbox-container{
+    color: rgb(160, 157, 157);
+}
+
+.contacto label {
+   /* display: block;*/
+    margin-bottom: 5px;
+    color: rgb(160, 157, 157);
+}
+
+.contacto .input-padron, .contacto textarea, .contacto select {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 5px;
+}
+
+.contacto button, .contenedor button {
+    align-self: center;
+    background-color: var(--primario-rojo-oscuro);
+    color: var(--primario-blanco);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.contacto button:hover {
+    background-color: var(--primario-dorado);
+}
+
+footer a {
+    color: #000;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+footer i {
+    margin-right: 8px;
+}
+
+/* media queries para tres tamaños de dispositivos */
+@media (max-width: 1440px) { /*antes 1024, cambiado a 1440*/
+    .contenedor {/*Fijarse xq en contactos no funciona bien ej responsive:1036x379*/
+        width: 90%;
+    }
+
+    .temporada, .personaje {
+        width: 45%;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .temporada, .personaje {
+        width: 100%;
+    }
+
+    .hero {
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 30px 0;
+    }
+
+    .titulo-seccion {
+        font-size: 1.5em;
+    }
+
+    .temporada, .personaje {
+        width: 100%;
+    }
+}
+
+/* contenedor del banner para pantallas chicas */
+@media (max-width: 768px) {
+    .banner-container {
+        width: 95%; /* reduce el ancho del contenedor para pantallas chcias */
+    }
+}
+
+/* Estilos del Modal */
+.modal {
+    display: none;
+    position: fixed;
+    background: rgba(0,0,0,0.7);
+    top: 30%;
+    bottom: 0;
+    right: 0;
+    left: 30%;
+}
+
+.modal-contenido {
+    background-color: #333333;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 500px; /* Ancho máximo del modal */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Sombra para el modal */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Botón Agregar temporada */
+#btn-agregar-temporada {
+    background-color: #660000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+#btn-agregar-temporada:hover {
+    background-color: #555;
+}

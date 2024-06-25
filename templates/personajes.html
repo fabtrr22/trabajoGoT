@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Personajes - Game of Thrones Fanpage</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <div class="cabecera">
+            <img id="img-header" src="img/contenedor2.jpg" alt="">
+
+            <input type="checkbox" id="menu-check">
+            <label id="menu" for="menu-check">
+                <span id="menu-abrir">&#9776;</span>
+                <span id="menu-cerrar">X</span>
+            </label>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="temporadas.html">Temporadas</a></li>
+                    <li><a href="personajes.html">Personajes</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="personajes" class="personajes">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Algunos Personajes</h2>
+                <div class="lista-personajes">
+                    <article class="personaje">
+                        <h3>Jon Snow</h3>
+                        <img src="img/personaje-1.png" alt="">
+                        <p>El Rey en el Norte</p>
+                    </article>
+                    <article class="personaje">
+                        <h3>Daenerys Targaryen</h3>
+                        <img src="img/personaje-2.jpg" alt="">
+                        <p>La Madre de Dragones</p>
+                    </article>
+                    <article class="personaje">
+                        <h3>Tyrion Lannister</h3>
+                        <img src="img/personaje-3.png" alt="">
+                        <p>El Imp</p>
+                    </article>
+                    <article class="personaje">
+                        <h3>Arya Stark</h3>
+                        <img src="img/personaje-4.png" alt="">
+                        <p>La Niña sin Rostro</p>
+                    </article>
+                    <article class="personaje">
+                        <h3>Cersei Lannister</h3>
+                        <img src="img/personaje-5.png" alt="">
+                        <p>La Reina Malvada</p>
+                    </article>
+                    <article class="personaje">
+                        <h3>Jaime Lannister</h3>
+                        <img src="img/personaje-6.png" alt="">
+                        <p>El Matarreyes</p>
+                    </article>
+                    <article class="personaje">
+                        <h3>Sansa Stark</h3>
+                        <img src="img/personaje-7.png" alt="">
+                        <p>La Dama de Invernalia</p>
+                    </article>
+                    <article class="personaje">
+                        <h3>Bran Stark</h3>
+                        <img src="img/personaje-8.png" alt="">
+                        <p>El Cuervo de Tres Ojos</p>
+                    </article>
+                    <article class="personaje">
+                        <h3>Theon Greyjoy</h3>
+                        <img src="img/personaje-9.png" alt="">
+                        <p>El Príncipe Ahogado</p>
+                    </article>
+                    <article class="personaje">
+                        <h3>Melisandre</h3>
+                        <img src="img/personaje-10.png" alt="">
+                        <p>La Sacerdotisa Roja</p>
+                    </article>
+                    
+<div class="contenedor_personajes">
+    <p>Estos son solo algunos de los muchos personajes memorables de Game of Thrones</p>
+</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <p>&copy; 2024 Game of Thrones. Todos los derechos reservados.</p>
+            <p>Codo a Codo Frontend [Grupo 16]</p>
+            <div class="iconos">
+                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <button onclick="scrollToTop()">Ir Arriba</button>
+        </div>
+    </footer>
+    <script src="js/hamburguesa.js"></script>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
