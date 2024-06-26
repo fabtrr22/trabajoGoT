@@ -56,7 +56,11 @@
                 <div class="lista-temporadas">
                     {% for temporada in temporadas %}
                     <article class="temporada">
-                        <h3>{{ temporada['nombre'] }}</h3>
+                        
+                        <div class="card-container--value">
+                            <h3>{{ temporada['nombre'] }}</h3>
+                            <img src="./static/img/icon _trash 2_.png" />
+                        </div>
                         <img src="{{ temporada['imagen'] }}" alt="">
                         <p>{{ temporada['descripcion'] }}</p>
                     </article>

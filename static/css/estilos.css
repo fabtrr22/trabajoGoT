@@ -204,6 +204,12 @@ nav ul li a:hover {
     margin: 10px;
     box-sizing: border-box;
 }
+.card-container--value{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+}
 
 .temporada img {
     max-width: 100%;
