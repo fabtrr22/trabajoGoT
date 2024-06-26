@@ -210,6 +210,15 @@ nav ul li a:hover {
     gap: 30px;
     align-items: flex-start;
 }
+.card-container--de{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.card-container--de img{
+    background-color: #600000;
+    padding: 0.3em;
+}
 
 .temporada img {
     max-width: 100%;
