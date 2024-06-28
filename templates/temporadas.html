@@ -8,7 +8,7 @@
     <title>Temporadas - Game of Thrones Fanpage</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header-footer.css') }}">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -23,55 +23,45 @@
 
             <nav>
                 <ul>
-                    <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                    <li><a href="{{ url_for('home') }}">Inicio</a></li>
                     <li><a href="{{ url_for('temporadas') }}">Temporadas</a></li>
-                    <li><a href="personajes.html">Personajes</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="{{ url_for('personajes') }}">Personajes</a></li>
+                    <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
     <main>
         <section id="temporadas" class="temporadas">
             <div class="contenedor">
                 <h2 class="titulo-seccion">Lista de Temporadas</h2>
-                <button id="btn-agregar-temporada">Agregar temporada</button>
-                <div id="modal-formulario" class="modal">
-                    <div class="modal-contenido">
-                        <span class="cerrar" id="cerrar-modal">&times;</span>
-                        <h3>Agregar Nueva Temporada</h3>
-                        <form id="form-agregar-temporada" method="POST" action="{{ url_for('temporadas') }}">
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" required>
-                            <label for="descripcion">Descripción:</label>
-                            <input type="text" id="descripcion" name="descripcion" required>
-                            <label for="imagen">Imagen:</label>
-                            <input type="text" id="imagen" name="imagen" required>
-                            <button type="submit">Agregar</button>
-                            <button type="button" id="cancelar">Cancelar</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="lista-temporadas">
-                    {% for temporada in temporadas %}
-                    <article class="temporada">
-                        
-                        <div class="card-container--value">
-                            <h3>{{ temporada['nombre'] }}</h3>
-                            <div class="card-container--de">
-                                <img src="./static/img/icon _trash 2_.png" />
-                                <img src="./static/img/lapiz-copia.png" />
-                            </div>
-                        </div>
-                        <img src="{{ temporada['imagen'] }}" alt="">
-                        <p>{{ temporada['descripcion'] }}</p>
-                    </article>
-                    {% endfor %}
+                <button id="openModal">Agregar Temporada</button>
+                <div class="lista-temporadas" id="lista-temporadas">
+                    <!-- las temporadas aparecen aqui de manera dinamica -->
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="form-title">Agregar Temporada</h2>
+            <form id="temporada-form">
+                <input type="hidden" id="temporada-id">
+                <label for="numero">Número:</label>
+                <input type="number" id="numero" required>
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" required>
+                <label for="descripcion">Descripción:</label>
+                <input type="text" id="descripcion" required>
+                <label for="imagen">Imagen:</label>
+                <input type="file" id="imagen">
+                <button type="submit" id="submit-button">Agregar</button>
+            </form>
+        </div>
+    </div>
 
     <footer>
         <div class="contenedor">
@@ -85,6 +75,7 @@
         </div>
     </footer>
     <script src="{{ url_for('static', filename='js/hamburguesa.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/temporadas.js') }}"></script>
     <script>
         function scrollToTop() {
             window.scrollTo({
@@ -92,31 +83,6 @@
                 behavior: 'smooth'
             });
         }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            const btnAgregarTemporada = document.getElementById("btn-agregar-temporada");
-            const modal = document.getElementById("modal-formulario");
-            const cerrarModal = document.getElementById("cerrar-modal");
-            const cancelar = document.getElementById("cancelar");
-
-            btnAgregarTemporada.addEventListener("click", function() {
-                modal.style.display = "block";
-            });
-
-            cerrarModal.addEventListener("click", function() {
-                modal.style.display = "none";
-            });
-
-            cancelar.addEventListener("click", function() {
-                modal.style.display = "none";
-            });
-
-            window.addEventListener("click", function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            });
-        });
     </script>
 </body>
 </html>
