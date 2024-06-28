@@ -216,9 +216,10 @@ nav ul li a:hover {
     flex-direction: row;
     gap: 5px;
 }
-.card-container--de img{
+#btn-editar, #btn-eliminar{
     background-color: #600000;
     padding: 0.3em;
+    margin: 0;
 }
 
 .temporada img {

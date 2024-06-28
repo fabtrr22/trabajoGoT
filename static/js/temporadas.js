@@ -90,16 +90,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 const article = document.createElement('article');
                 article.classList.add('temporada');
                 article.innerHTML = `
-                    <h3>Temporada ${temporada.numero}</h3>
+                    <div class="card-container--value">
+                        <h3>Temporada ${temporada.numero}</h3>
+                        <div class="card-container--de">
+                            <button id="btn-editar" onclick="editarTemporada(${temporada.id})">
+                                <img src="../static/img/lapiz-copia.png" alt="Editar" />
+                            </button>
+                            <button id="btn-eliminar" onclick="eliminarTemporada(${temporada.id})">
+                                <img src="../static/img/icon_trash.png" alt="Eliminar" />
+                            </button>
+                        </div>
+                    </div>    
                     <img src="/static/img/${temporada.imagen_url}" alt="">
                     <p>${temporada.titulo}</p>
-                    <p>${temporada.descripcion}</p>
-                    <button onclick="editarTemporada(${temporada.id})">
-                        <img src="../static/img/lapiz-copia.png" alt="Editar" />
-                    </button>
-                    <button onclick="eliminarTemporada(${temporada.id})">
-                        <img src="../static/img/icon_trash.png" alt="Eliminar" />
-                    </button>
+                    <p>${temporada.descripcion}</p>                   
                 `;
                 listaTemporadas.appendChild(article);
             });
