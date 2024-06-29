@@ -38,7 +38,10 @@
         <section id="personajes" class="personajes">
             <div class="contenedor">
                 <h2 class="titulo-seccion">Algunos Personajes</h2>
-                <div class="lista-personajes">
+                <button id="openModal">Agregar Personaje</button>
+                <div class="lista-personajes" id="lista-personajes">
+                    <!-- los personajes aparecen aqui de manera dinamica -->
+                    <!--
                     <article class="personaje">
                         <h3>Jon Snow</h3>
                         <img src="img/personaje-1.png" alt="">
@@ -89,14 +92,33 @@
                         <img src="img/personaje-10.png" alt="">
                         <p>La Sacerdotisa Roja</p>
                     </article>
+                    -->
                     
-<div class="contenedor_personajes">
-    <p>Estos son solo algunos de los muchos personajes memorables de Game of Thrones</p>
-</div>
+                    <div class="contenedor_personajes">
+                        <p>Estos son solo algunos de los muchos personajes memorables de Game of Thrones</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="form-title">Agregar Personaje</h2>
+            <form id="personaje-form">
+                <input type="hidden" id="personaje-id">
+                <label for="nombre">Nombre del personaje:</label>
+                <input type="text" id="nombre" required>
+                <label for="descripcion">Descripción:</label>
+                <input type="text" id="descripcion" required>
+                <label for="imagen">Imagen:</label>
+                <input type="file" id="imagen">
+                <button type="submit" id="submit-button">Agregar</button>
+            </form>
+        </div>
+    </div>
 
     <footer>
         <div class="contenedor">
@@ -110,6 +132,7 @@
         </div>
     </footer>
     <script src="{{ url_for('static', filename='js/hamburguesa.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/personajes.js') }}"></script>
     <script>
         function scrollToTop() {
             window.scrollTo({
