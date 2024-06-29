@@ -199,7 +199,7 @@ nav ul li a:hover {
     border: 1px solid var(--secundario-plateado);
     padding: 20px;
     margin: 10px;
-    width: 80%;
+    width: 45%; /*80%;*/
     text-align: center;
     box-sizing: border-box;
 }
