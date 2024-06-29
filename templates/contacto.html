@@ -103,7 +103,7 @@
             <button onclick="scrollToTop()">Ir Arriba</button>
         </div>
     </footer>
-    <script src="js/hamburguesa.js"></script>
+    <script src="{{ url_for('static', filename='js/hamburguesa.js') }}"></script>
     <script>
         function scrollToTop() {
             window.scrollTo({
