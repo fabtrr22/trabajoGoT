@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const descripcionInput = document.getElementById('descripcion');
     const imagenInput = document.getElementById('imagen');
     const submitButton = document.getElementById('submit-button');
+    const formTitle = document.getElementById('form-title');
     const listaPersonajes = document.getElementById('lista-personajes');
 
     const modal = document.getElementById("modal");
@@ -17,6 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     closeModalButton.onclick = function() {
         modal.style.display = "none";
+        submitButton.textContent = 'Agregar';
+        formTitle.textContent = 'Agregar Personaje';
+        form.reset();
     }
 
     window.onclick = function(event) {
@@ -115,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
             nombreInput.value = data.nombre;
             descripcionInput.value = data.descripcion;
             submitButton.textContent = 'Actualizar';
+            formTitle.textContent = 'Editar Personaje';
             modal.style.display = "block";
         });
     };

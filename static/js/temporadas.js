@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const descripcionInput = document.getElementById('descripcion');
     const imagenInput = document.getElementById('imagen');
     const submitButton = document.getElementById('submit-button');
+    const formTitle = document.getElementById('form-title');
     const listaTemporadas = document.getElementById('lista-temporadas');
 
     const modal = document.getElementById("modal");
@@ -18,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     closeModalButton.onclick = function() {
         modal.style.display = "none";
+        submitButton.textContent = 'Agregar';
+        formTitle.textContent = 'Agregar Temporada';
+        form.reset();
     }
 
     window.onclick = function(event) {
@@ -120,6 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
             tituloInput.value = data.titulo;
             descripcionInput.value = data.descripcion;
             submitButton.textContent = 'Actualizar';
+            formTitle.textContent = 'Editar Temporada';
             modal.style.display = "block";
         });
     };
