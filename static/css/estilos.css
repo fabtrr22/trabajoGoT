@@ -386,7 +386,10 @@ footer i {
 
 #temporada-form label,
 #temporada-form input,
-#temporada-form button {
+#temporada-form button,
+#personaje-form label,
+#personaje-form input,
+#personaje-form button{
     display: block;
     margin-bottom: 10px;
 }
